@@ -1,0 +1,3 @@
+# /etc/udev/rules.d/rtc-i2c.rules
+
+KERNEL=="rtc0", RUN+="/sbin/hwclock --hctosys"
