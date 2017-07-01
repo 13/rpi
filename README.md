@@ -3,6 +3,14 @@
 Modules
 -------
 
+### Pressure/Altitude/Temperature (BMP085)
+
+    git clone https://github.com/adafruit/Adafruit_Python_BMP.git
+    
+    cd Adafruit_Python_DHT
+    
+    sudo python setup.py install
+
 ### RTC (DS3231)
 
 Edit `/boot/config.txt`:
@@ -27,7 +35,7 @@ Test:
     
     hwclock -r
 
-### Temperature (DHT22)
+### Temperature/Humidity (DHT22)
 
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git
     
