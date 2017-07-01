@@ -7,7 +7,7 @@ Modules
 
     git clone https://github.com/adafruit/Adafruit_Python_BMP.git
     
-    cd Adafruit_Python_DHT
+    cd Adafruit_Python_BMP
     
     sudo python setup.py install
 
