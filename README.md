@@ -27,3 +27,17 @@ Test:
     
     hwclock -r
 
+Backup
+------
+
+    mkdir root
+
+    mount /dev/sdd2 root
+    mount /dev/sdd1 root/boot
+
+    cd root
+
+    bsdtar -cpf /zoid/piw-20170701.tar.gz .
+
+    umount root/boot
+    umount root
