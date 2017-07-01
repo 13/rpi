@@ -39,5 +39,4 @@ Backup
 
     bsdtar -cpf /zoid/piw-20170701.tar.gz .
 
-    umount root/boot
-    umount root
+    umount -R root
