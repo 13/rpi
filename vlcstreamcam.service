@@ -1,0 +1,15 @@
+[Unit]
+Description=VideoOnLAN Service
+After=local-fs.target network.target
+
+[Service]
+Type=forking
+User=ced
+#ExecStart=/usr/bin/vlc --daemon --syslog -I http --http-port 8090 --http-password password 
+#ExecStart=/usr/bin/vlc --daemon --syslog -I dummy v4l2:///dev/video0:input=1 --sout '#transcode{vcodec=mjpg}:std{access=http{mime=multipart/x-mixed-replace;boundary=7b3cc56e5f51db803f790dad720ed50a},mux=mpjpeg,dst=192.4.100.100:8081}'
+#ExecStart=/usr/bin/cvlc --daemon -I dummy v4l2:///dev/video0:input=1 --sout '#transcode{vcodec=mjpg}:std{access=http{mime=multipart/x-mixed-replace;boundary=7b3cc56e5f51db803f790dad720ed50a},mux=mpjpeg,dst=192.4.100.100:8081}'
+ExecStart=/home/ced/runvlc.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
