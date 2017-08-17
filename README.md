@@ -60,18 +60,18 @@ Backup
 Database
 --------
 
-CREATE TABLE dht22 (id integer not null, temperature double precision not null, humidity double precision not null, tstamp timestamp not null);
+    CREATE TABLE dht22 (id integer not null, temperature double precision not null, humidity double precision not null, tstamp timestamp not null);
 
-CREATE TABLE bmp085 (id integer not null, temperature double precision not null, pressure double precision not null, altitude double precision not null, tstamp timestamp not null);
+    CREATE TABLE bmp085 (id integer not null, temperature double precision not null, pressure double precision not null, altitude double precision not null, tstamp timestamp not null);
 
-CREATE TABLE windspeed (id integer not null, speed double precision not null, tstamp timestamp not null);
+    CREATE TABLE windspeed (id integer not null, speed double precision not null, tstamp timestamp not null);
 
-CREATE TABLE raingauge (id integer not null, rain double precision not null, tstamp timestamp not null);
+    CREATE TABLE raingauge (id integer not null, rain double precision not null, tstamp timestamp not null);
 
-CREATE TABLE onewire (id integer not null, temperature double precision not null, tstamp timestamp not null);
+    CREATE TABLE onewire (id integer not null, temperature double precision not null, tstamp timestamp not null);
 
-CREATE TABLE battery (id integer not null, volt double precision not null, tstamp timestamp not null);
+    CREATE TABLE battery (id integer not null, volt double precision not null, tstamp timestamp not null);
 
-CREATE TABLE portal (id integer not null, state integer not null, tstamp timestamp not null);
+    CREATE TABLE portal (id integer not null, state integer not null, tstamp timestamp not null);
 
 
