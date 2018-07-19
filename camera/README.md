@@ -19,3 +19,12 @@ Edit `/boot/config.txt`:
     # Disable the PWR LED.
     dtparam=pwr_led_trigger=none
     dtparam=pwr_led_activelow=off
+
+
+Disable LAN LEDs:
+
+    lan951x-led-ctl
+    
+Streaming:
+
+    mjpg-streamer
