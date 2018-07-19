@@ -23,8 +23,8 @@ Edit `/boot/config.txt`:
 
 Disable LAN LEDs:
 
-    lan951x-led-ctl
+    /usr/bin/lan951x-led-ctl --fdx=0 --lnk=0 --spd=0
     
 Streaming:
 
-    mjpg-streamer
+    /usr/bin/mjpg_streamer -i "input_raspicam.so -x 1280 -y 720 -fps 15 -ex night" -o "output_http.so -p 8080 -w /usr/share/mjpg-streamer/www/ -n -c user:pass"
