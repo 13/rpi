@@ -49,6 +49,7 @@ Edit `/boot/config.txt`:
 
     dtoverlay=w1-gpio
 
+Repo:
 
     git clone https://github.com/timofurrer/w1thermsensor
 
