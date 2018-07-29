@@ -43,6 +43,15 @@ Test:
     
     sudo python setup.py install
 
+### Temperature (1Wire DS18B20)
+
+Edit `/boot/config.txt`:
+
+    dtoverlay=w1-gpio
+
+
+    git clone https://github.com/timofurrer/w1thermsensor
+
 Backup
 ------
 
