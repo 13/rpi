@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable LAN LEDs
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/lan951x-led-ctl --fdx=0 --lnk=0 --spd=0
+
+[Install]
+WantedBy=multi-user.target
