@@ -1,0 +1,3 @@
+# /etc/udev/rules.d/50-rtc-hwclock.rules
+
+KERNEL=="rtc0", RUN+="/sbin/hwclock -s"
