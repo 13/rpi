@@ -25,10 +25,18 @@ Edit `/etc/modules-load.d/raspberrypi.conf`:
     
     rtc-ds1307
     
-Add `/etc/udev/rules.d/rtc-i2c.rules`
+Add `/etc/udev/rules.d/50-rtc-hwclock.rules`
 
-    KERNEL=="rtc0", RUN+="/sbin/hwclock --hctosys"
+    KERNEL=="rtc0", RUN+="/sbin/hwclock -s"
+
+Edit `/etc/mkinitcpio.conf`:
+
+    MODULES=(i2c-bcm2835 i2c-dev rtc-ds1307)
     
+    BINARIES=(hwclock)
+    
+    FILES=(/etc/udev/rules.d/50-rtc-hwclock.rules)
+
 Test:
 
     i2cdetect -y 1
@@ -71,7 +79,7 @@ Database
 --------
 
     CREATE TABLE dht22 (id integer not null, temperature double precision not null, humidity double precision not null, tstamp timestamp not null);
-
+    
     CREATE TABLE bmp085 (id integer not null, temperature double precision not null, pressure double precision not null, altitude double precision not null, tstamp timestamp not null);
 
     CREATE TABLE windspeed (id integer not null, speed double precision not null, tstamp timestamp not null);
