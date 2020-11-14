@@ -27,3 +27,45 @@ pacman -S fake-hwclock
 systemctl enable fake-hwclock
 systemctl start fake-hwclock
 ```
+
+### 2.4. Set hostname
+
+```bash
+hostnamectl set-hostname p4
+```
+
+### 2.5. Set a secure root passwd
+
+```bash
+passwd
+```
+
+### 2.6. sudo & new user
+
+```bash
+pacman -S sudo
+```
+
+* Search for following line and uncomment it:
+
+```bash
+%wheel ALL=(ALL) ALL
+```
+
+* Add a new user
+
+```bash
+useradd -d /home/yourUserName -m -G wheel -s /bin/bash ben
+```
+
+* Set a password for your new user:
+
+```bash
+passwd ben
+```
+
+### 2.6.1 Delete default user alarm
+
+```bash
+sudo userdel alarm
+```
