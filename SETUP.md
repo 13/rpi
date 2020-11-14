@@ -100,3 +100,11 @@ cp records /var/spool/uptimed
 systemctl enable uptimed
 systemctl start uptimed
 ```
+### 4.3. vnstat
+
+```bash
+pacman -S vnstat
+cp vnstat.db /var/lib/vnstat/vnstat.db
+systemctl enable vnstat
+systemctl start vnstat
+```
