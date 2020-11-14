@@ -46,10 +46,11 @@ passwd
 pacman -S sudo
 ```
 
-* Search for following line and uncomment it:
+* Uncomment and add:
 
 ```bash
 %wheel ALL=(ALL) ALL
+ben ALL=(ALL) NOPASSWD: ALL
 ```
 
 * Add a new user
