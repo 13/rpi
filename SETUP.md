@@ -138,6 +138,6 @@ smbpasswd ben
 mkdir /srv/smb
 chown nobody:nobody /srv/smb
 
-systemctl enable smbd
-systemctl start smbd
+systemctl enable smb
+systemctl start smb
 ```
