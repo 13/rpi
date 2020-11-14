@@ -141,3 +141,20 @@ chown nobody:nobody /srv/smb
 systemctl enable smb
 systemctl start smb
 ```
+
+## Fixes
+### Raspberry Pi 4 uas slow ssd speed
+
+```bash
+dmesg |grep usb
+
+usb 2-2: new SuperSpeed Gen 1 USB device number 2 using xhci_hcd 
+usb 2-2: New USB device found, idVendor=152d, idProduct=0578, bcdDevice= 2.09
+usb 2-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 2-2: Product: USB to ATA/ATAPI Bridge
+usb 2-2: Manufacturer: JMicron
+usb 2-2: SerialNumber: 0123456789ABCDEF
+
+vi /boot/cmdline.txt
+usb-storage.quirks=152d:0578:u
+```
