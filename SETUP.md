@@ -118,3 +118,11 @@ cp vnstat.db /var/lib/vnstat/vnstat.db
 systemctl enable vnstat
 systemctl start vnstat
 ```
+
+### 4.3. cronie
+
+```bash
+pacman -S cronie
+systemctl enable cronie
+systemctl start cronie
+```
