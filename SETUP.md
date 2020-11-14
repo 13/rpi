@@ -56,7 +56,7 @@ ben ALL=(ALL) NOPASSWD: ALL
 * Add a new user
 
 ```bash
-useradd -d /home/yourUserName -m -G wheel -s /bin/bash ben
+useradd -m -G users,wheel,power,tty,video,audio,storage,uucp,docker -s /bin/zsh ben
 ```
 
 * Set a password for your new user:
