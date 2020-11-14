@@ -91,3 +91,12 @@ pacman -S msmtp
 cp bin/msmtp*.sh
 cp bin/upmail.sh
 ```
+
+### 4.2. uptimed
+
+```bash
+pacman -S uptimed
+cp records /var/spool/uptimed
+systemctl enable uptimed
+systemctl start uptimed
+```
