@@ -119,10 +119,22 @@ systemctl enable vnstat
 systemctl start vnstat
 ```
 
-### 4.3. cronie
+### 4.4. cronie
 
 ```bash
 pacman -S cronie
 systemctl enable cronie
 systemctl start cronie
+```
+
+### 4.5. samba
+
+```bash
+pacman -S samba
+
+smbpasswd -a ben
+smbpasswd ben
+
+systemctl enable smbd
+systemctl start smbd
 ```
