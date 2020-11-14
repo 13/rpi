@@ -135,6 +135,9 @@ pacman -S samba
 smbpasswd -a ben
 smbpasswd ben
 
+mkdir /srv/smb
+chown nobody:nobody /srv/smb
+
 systemctl enable smbd
 systemctl start smbd
 ```
