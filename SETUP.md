@@ -1,3 +1,6 @@
+
+## 2. Basic system setup
+
 ### 2.1. Termite Backspace fix
 
 ```bash
@@ -77,4 +80,13 @@ sudo userdel alarm
 ```bash
 pacman -S tmux
 systemctl enable tmux@ben
+```
+
+## 4. Advanced setup
+### 4.1. msmtp
+
+```bash
+pacman -S msmtp
+cp bin/msmtp*.sh
+cp bin/upmail.sh
 ```
