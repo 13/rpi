@@ -70,3 +70,11 @@ passwd ben
 ```bash
 sudo userdel alarm
 ```
+
+## 3. Advanced setup
+### 3.1. Tmux
+
+```bash
+pacman -S tmux
+systemctl enable tmux@ben
+```
