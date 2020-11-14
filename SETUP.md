@@ -34,6 +34,7 @@ systemctl start fake-hwclock
 ### 2.4. Set hostname
 
 ```bash
+pacman -S inetutils
 hostnamectl set-hostname p4
 ```
 
@@ -83,7 +84,7 @@ systemctl enable tmux@ben
 ```
 
 ## 4. Advanced setup
-### 4.1. msmtp
+### 4.1. msmtp & upmail
 
 ```bash
 pacman -S msmtp
