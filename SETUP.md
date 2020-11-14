@@ -1,4 +1,10 @@
-### 2.1. German keyboard layout
+### 2.1. Termite Backspace fix
+
+```bash
+pacman -S termite-terminfo
+```
+
+### 2.2. German keyboard layout
 
 ```bash
 loadkeys de
