@@ -75,6 +75,16 @@ passwd ben
 sudo userdel alarm
 ```
 
+## Tweaks
+### fsck & disable ipv6
+
+* Add to /boot/cmdline.txt
+
+```bash
+vi /boot/cmdline.txt
+ipv6.disable_ipv6=1 fsck.mode=force fsck.repair=yes
+```
+
 ## 3. Advanced setup
 ### 3.1. Tmux
 
