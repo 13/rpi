@@ -93,6 +93,28 @@ ipv6.disable_ipv6=1 fsck.mode=force fsck.repair=yes
   scp -r bin .msmtprc .tmux.conf .vim* .bash* ben@x
 ```
 
+### Set network
+
+* Add `svim /etc/netctl/ml`
+
+```bash
+Description='muh network connection'
+Interface=eth0
+Connection=ethernet
+IP=static
+Address=('192.168.22.7/24')
+Gateway='192.168.22.2'
+DNS=('192.168.22.6' '1.1.1.1' '8.8.4.4')
+SkipNoCarrier=yes
+Priority=1
+ExcludeAuto=no
+```
+
+```bash
+  sudo netctl enable ml
+  sudo netctl disable systemd-networkd systemd-resolved
+```
+
 ## 3. Advanced setup
 ### 3.1. Tmux
 
