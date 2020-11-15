@@ -13,35 +13,47 @@ Modules
 
 ### RTC (DS3231)
 
-Edit `/boot/config.txt`:
+* Edit `/boot/config.txt`:
 
+```bash
     dtoverlay=i2c-rtc,ds3231
+```
 
-Edit `/etc/modules-load.d/raspberrypi.conf`:
+* Edit `/etc/modules-load.d/raspberrypi.conf`:
 
+```bash
     i2c-bcm2835
-    
     i2c-dev
-    
     rtc-ds1307
+```
     
-Add `/etc/udev/rules.d/50-rtc-hwclock.rules`
+* Add `/etc/udev/rules.d/50-rtc-hwclock.rules`
 
+```bash
     KERNEL=="rtc0", RUN+="/sbin/hwclock -s"
+```
 
-Edit `/etc/mkinitcpio.conf`:
+* Edit `/etc/mkinitcpio.conf`:
 
+
+```bash
     MODULES=(i2c-bcm2835 i2c-dev rtc-ds1307)
-    
     BINARIES=(hwclock)
-    
     FILES=(/etc/udev/rules.d/50-rtc-hwclock.rules)
+```
 
-Test:
+* Generate new linux kernel image
 
+```bash
+    mkinitcpio -p linux-raspberrypi4
+```
+
+* Test:
+
+```bash
     i2cdetect -y 1
-    
     hwclock -r
+```
 
 ### Temperature/Humidity (DHT22)
 
