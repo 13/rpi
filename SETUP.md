@@ -11,9 +11,11 @@ pacman -S termite-terminfo
 
 ```bash
 loadkeys de
-echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo KEYMAP=de-latin1-nodeadkeys > /etc/vconsole.conf
+echo LANG=en_GB.UTF-8 > /etc/locale.conf
+sed -i "s/#de_DE.UTF-8/de_DE.UTF-8/" /etc/locale.gen
 sed -i "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen
+sed -i "s/#en_GB.UTF-8/en_GB.UTF-8/" /etc/locale.gen
 locale-gen
 ```
 ### 2.3. Set timezone & NTP
@@ -27,7 +29,7 @@ timedatectl set-ntp true
 
 ```bash
 pacman -S fake-hwclock
-systemctl enable fake-hwclock
+systemctl enable fake-hwclock // disable if RTC
 systemctl start fake-hwclock
 ```
 
