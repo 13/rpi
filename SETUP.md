@@ -29,7 +29,7 @@ timedatectl set-ntp true
 
 ```bash
 pacman -S fake-hwclock
-systemctl enable fake-hwclock // disable if RTC
+systemctl enable fake-hwclock fake-hwclock-save.timer // disable if RTC
 systemctl start fake-hwclock
 ```
 
