@@ -74,7 +74,7 @@ passwd ben
 ### 2.6.1 Delete default user alarm
 
 ```bash
-sudo userdel alarm
+sudo userdel -r alarm  // -r delete home directory
 ```
 
 ## Tweaks
