@@ -151,6 +151,22 @@ cp bin/msmtp*.sh
 cp bin/upmail.sh
 ```
 
+* Edit `sudo vi /etc/systemd/system/upmail\@.service`
+
+```bash
+[Unit]
+Description=Upmail
+After=network.target
+
+[Service]
+Type=forking
+User=%I
+ExecStart=/home/%I/bin/upmail.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### 4.2. uptimed
 
 ```bash
