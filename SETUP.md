@@ -92,6 +92,25 @@ ipv6.disable_ipv6=1 fsck.mode=force fsck.repair=yes
 
 ```bash
 pacman -S tmux
+```
+
+* Create `vi /etc/systemd/system/tmux\@.service`
+```bash
+[Unit]
+Description=Start tmux in detached session
+
+[Service]
+Type=forking
+User=%I
+WorkingDirectory=/home/%I
+ExecStart=/usr/bin/tmux new-session -s %u -d
+ExecStop=/usr/bin/tmux kill-session -t %u
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
 systemctl enable tmux@ben
 ```
 
