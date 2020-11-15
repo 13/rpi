@@ -17,6 +17,7 @@ Modules
 
 ```bash
     dtoverlay=i2c-rtc,ds3231
+    dtparam=i2c_arm=on
 ```
 
 * Edit `/etc/modules-load.d/raspberrypi.conf`:
@@ -42,7 +43,7 @@ Modules
     FILES=(/etc/udev/rules.d/50-rtc-hwclock.rules)
 ```
 
-* Generate new linux kernel image
+* Generate mkinitcpio & reboot
 
 ```bash
     mkinitcpio -p linux-raspberrypi4
