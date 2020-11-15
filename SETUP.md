@@ -113,6 +113,7 @@ ExcludeAuto=no
 ```bash
 sudo netctl enable ml
 sudo systemctl disable systemd-networkd systemd-resolved
+sudo rm /etc/resolv.conf
 ```
 
 ## 3. Advanced setup
