@@ -87,6 +87,12 @@ vi /boot/cmdline.txt
 ipv6.disable_ipv6=1 fsck.mode=force fsck.repair=yes
 ```
 
+### Copy config files bash tmux vim msmtp
+
+```bash
+  scp -r bin .msmtprc .tmux.conf .vim* .bash* ben@x
+```
+
 ## 3. Advanced setup
 ### 3.1. Tmux
 
