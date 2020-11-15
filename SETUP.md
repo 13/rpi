@@ -90,12 +90,12 @@ ipv6.disable_ipv6=1 fsck.mode=force fsck.repair=yes
 ### Copy config files bash tmux vim msmtp
 
 ```bash
-  scp -r bin .msmtprc .tmux.conf .vim* .bash* ben@x
+scp -r bin .msmtprc .tmux.conf .vim* .bash* ben@x
 ```
 
 ### Set network
 
-* Add `svim /etc/netctl/ml`
+* Add `sudo vi /etc/netctl/ml`
 
 ```bash
 Description='muh network connection'
@@ -111,8 +111,8 @@ ExcludeAuto=no
 ```
 
 ```bash
-  sudo netctl enable ml
-  sudo netctl disable systemd-networkd systemd-resolved
+sudo netctl enable ml
+sudo systemctl disable systemd-networkd systemd-resolved
 ```
 
 ## 3. Advanced setup
