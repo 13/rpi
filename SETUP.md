@@ -13,8 +13,6 @@ pacman -S termite-terminfo
 loadkeys de
 echo KEYMAP=de-latin1-nodeadkeys > /etc/vconsole.conf
 echo LANG=en_GB.UTF-8 > /etc/locale.conf
-sed -i "s/#de_DE.UTF-8/de_DE.UTF-8/" /etc/locale.gen
-sed -i "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen
 sed -i "s/#en_GB.UTF-8/en_GB.UTF-8/" /etc/locale.gen
 locale-gen
 ```
